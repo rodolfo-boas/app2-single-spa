@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { APP_BASE_HREF } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
@@ -31,10 +30,12 @@ const ROUTES_MICRO_APP: Routes = [
     BrowserModule,
     RouterModule.forRoot(ROUTES_MICRO_APP)
   ],
-  providers: [    {
-    provide: APP_BASE_HREF,
-    useValue: environment.appBaseHref // tem que ser a mesma route do base-app
-  }],
+  providers: [
+  //   {
+  //   // provide: APP_BASE_HREF,
+  //   // useValue: environment.appBaseHref // tem que ser a mesma route do base-app
+  // }
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
